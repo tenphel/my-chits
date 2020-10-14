@@ -1,4 +1,4 @@
 $grep -n -i "function" file1.php file2.php  #grepping "function" from both file with line no. and ignoring case sensitivity options respectively.
 $find . -type f -size -10k -iname "*.php"    #finding file size less than 10kb file name ending with .php
-$find . -type f -size -10k -iname "*.php" -exec grep -i -n "function" {} * | tee of.txt			#executing grep command for .php file to search "function" in it by numbering the 
+$find . -type f -size -10k -iname "*.php" | grep -i -n "function" {} * | tee of.txt			#executing grep command for .php file to search "function" in it by numbering the 
 lines and ignoring the case, later pipe it. here tee command will show the result on the screen and save in of.txt at the same time.
